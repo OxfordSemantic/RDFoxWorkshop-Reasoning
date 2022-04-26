@@ -1,9 +1,11 @@
 @prefix : <http://www.oxfordsemantic.tech/f1demo/> .
 
-___ a owl:Class .
+:results a owl:Class .
 
+# This property tells us in what position the driver finished the race, as an integer
 :results_positionOrder a ___ .
 
+# This class contains the results where the object of :results_positionOrder is equal to 1
 :wins a owl:Class ;
     ___ [ 
         a owl:Class ;

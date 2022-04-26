@@ -2,8 +2,10 @@
 
 :results a owl:Class .
 
+# This property tells us in what position the driver finished the race, as an integer
 :results_positionOrder a owl:DatatypeProperty .
 
+# This class contains the results where the object of :results_positionOrder is equal to 1
 :wins a owl:Class ;
     owl:equivalentClass [ 
         a owl:Class ;

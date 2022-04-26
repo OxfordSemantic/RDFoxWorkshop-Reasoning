@@ -1,0 +1,5 @@
+PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
+
+SELECT ?s ?o WHERE {
+    ?s :hasRacedIn ?o
+}

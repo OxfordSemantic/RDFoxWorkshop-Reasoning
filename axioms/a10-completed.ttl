@@ -1,0 +1,18 @@
+@prefix : <http://www.oxfordsemantic.tech/f1demo/> .
+
+:results a owl:Class .
+
+:results_positionOrder a owl:DatatypeProperty .
+
+:wins a owl:Class ;
+    owl:equivalentClass [ 
+        a owl:Class ;
+        owl:intersectionOf (
+            :results
+            [
+                a owl:Restriction ;
+                owl:onProperty :results_positionOrder ;
+                owl:hasValue "1"^^xsd:integer
+            ]
+        )
+    ] .

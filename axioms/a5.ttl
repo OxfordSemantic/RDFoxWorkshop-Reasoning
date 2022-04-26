@@ -1,0 +1,14 @@
+@prefix : <http://www.oxfordsemantic.tech/f1demo/> .
+
+:drivers a ___ .
+:results a ___ .
+:constructors a ___ .
+
+[
+    a owl:AllDisjointClasses ;
+    owl:members (
+        ___
+        ___
+        ___
+    )
+] .

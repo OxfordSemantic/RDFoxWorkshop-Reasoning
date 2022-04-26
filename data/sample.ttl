@@ -1,0 +1,10 @@
+:drivers\/123456789 # no class
+    :drivers_forename "John";
+    :drivers_surname "Smith" .
+
+:results\/123456789 a :results;
+    :results_driver :drivers\/123456789, :drivers\/1; # two drivers
+    :drivers_forename "John"; # wrong - this is a driver property
+    # no constructor
+    :results_race :races\/123456789;
+    :results_positionOrder "1"^^xsd:integer .

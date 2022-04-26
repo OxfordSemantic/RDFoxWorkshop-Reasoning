@@ -1,0 +1,18 @@
+@prefix : <http://www.oxfordsemantic.tech/f1demo/> .
+
+___ a owl:Class .
+
+:results_positionOrder a ___ .
+
+:wins a owl:Class ;
+    ___ [ 
+        a owl:Class ;
+        ___ (
+            ___
+            [
+                a ___ ;
+                owl:onProperty ___ ;
+                ___ "1"^^xsd:integer
+            ]
+        )
+    ] .

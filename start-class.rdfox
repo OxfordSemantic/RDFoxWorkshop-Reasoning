@@ -1,0 +1,123 @@
+# PREPARATION
+
+prefix : <http://www.oxfordsemantic.tech/f1demo/>
+set output out
+
+endpoint start
+
+dstore create f1
+active f1
+
+import data/upTo2020.ttl.zip
+import data/sample.ttl
+
+# AXIOM SET 1
+
+answer queries/q1.rq
+
+import > :axioms axioms/a1.ttl
+importaxioms :axioms
+
+answer queries/q1.rq
+
+# AXIOM SET 2
+
+answer queries/q2.rq
+
+import > :axioms axioms/a2.ttl
+importaxioms :axioms
+
+answer queries/q2.rq
+
+# AXIOM SET 3
+
+answer queries/q3.rq
+
+import > :axioms axioms/a3.ttl
+importaxioms :axioms
+
+answer queries/q3.rq
+
+# AXIOM SET 4
+
+answer queries/q4.rq
+
+import > :axioms axioms/a4.ttl
+importaxioms :axioms
+
+answer queries/q4.rq
+
+# AXIOM SET 5
+
+import > :axioms axioms/a5.ttl
+importaxioms :axioms
+
+# AXIOM SET 6
+
+answer queries/q6.rq
+
+import > :axioms axioms/a6.ttl
+importaxioms :axioms
+
+answer queries/q6.rq
+
+# AXIOM SET 7
+
+import > :axioms axioms/a7.ttl
+importaxioms :axioms
+
+# AXIOM SET 8
+
+answer queries/q8.rq
+
+import > :axioms axioms/a8.ttl
+importaxioms :axioms
+
+answer queries/q8.rq
+
+# AXIOM SET 9
+
+answer queries/q9.rq
+
+import > :axioms axioms/a9.ttl
+importaxioms :axioms
+
+answer queries/q9.rq
+
+# AXIOM SET 10
+
+answer queries/q10.rq
+
+import > :axioms axioms/a10.ttl
+importaxioms :axioms
+
+answer queries/q10.rq
+
+# CLEAR AXIOMS
+
+importaxioms :axioms -
+info rulestats
+
+# RULE 1
+
+import rules/r1.dlog
+
+# RULE 2
+
+import rules/r2.dlog
+
+# RULE 3
+
+import rules/r3.dlog
+
+# RULE 4
+
+import rules/r4.dlog
+
+# RULE 5
+
+import rules/r5.dlog
+
+# RULE 6
+
+import rules/r6.dlog

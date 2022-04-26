@@ -1,0 +1,3 @@
+SELECT ?p ?o WHERE {
+    :qualifying\/123456789 ?p ?o
+}

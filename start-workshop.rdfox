@@ -96,7 +96,7 @@ answer queries/q10.rq
 # CLEAR AXIOMS, REMOVE "SAMPLE" DATA
 
 importaxioms :axioms -
-info rulestats
+info axioms
 
 import - data/sample.ttl
 

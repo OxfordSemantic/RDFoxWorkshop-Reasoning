@@ -1,0 +1,7 @@
+SELECT ?forename ?surname ?percentage WHERE {
+    ?driver :drivers_forename ?forename;
+        :drivers_surname ?surname;
+        :hasWinPercentage ?percentage;
+        :hasRaceCount ?count .
+    FILTER(?count > 10)
+} ORDER BY DESC(?percentage)

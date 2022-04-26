@@ -1,5 +1,5 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT ?s ?o WHERE {
+SELECT (COUNT(?o) AS ?count) WHERE {
     ?s :hasRacedIn ?o
 }

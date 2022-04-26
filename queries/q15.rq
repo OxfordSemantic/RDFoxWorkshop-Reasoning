@@ -1,0 +1,3 @@
+SELECT (COUNT(?driver) AS ?count) WHERE {
+    ?driver a :DriverWithoutPodiums
+}

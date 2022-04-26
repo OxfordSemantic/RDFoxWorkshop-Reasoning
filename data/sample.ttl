@@ -8,3 +8,5 @@
     # missing constructor
     :results_race :races\/123456789;
     :results_positionOrder "1"^^xsd:integer .
+
+:qualifying\/123456789 a :polePositionQualifying .

@@ -1,6 +1,10 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT (COUNT(?o) AS ?count)
+SELECT ?forename ?surname ?count
 WHERE {
-    ?s :hasRaceCount ?o
+    ?driver :hasRaceCount ?count ;
+        :drivers_forename ?forename ;
+        :drivers_surname ?surname .
 }
+ORDER BY DESC(?count)
+LIMIT 10

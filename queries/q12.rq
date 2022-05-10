@@ -1,6 +1,9 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT (COUNT(?driver) AS ?count)
+SELECT ?forename ?surname
 WHERE {
-    ?driver a :DriverWithoutPodiums
+    ?driver a :DriverWithoutPodiums ;
+        :drivers_forename ?forename ;
+        :drivers_surname ?surname .
 }
+LIMIT 10

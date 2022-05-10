@@ -1,6 +1,9 @@
 @prefix : <http://www.oxfordsemantic.tech/f1demo/> .
 
-:drivers a owl:Class .
-:results a owl:Class .
+:results_driver a owl:ObjectProperty .
 
-:drivers owl:disjointWith :results .
+:results rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty :results_driver ;
+    owl:maxCardinality 1
+] .

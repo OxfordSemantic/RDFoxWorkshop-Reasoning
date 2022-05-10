@@ -1,9 +1,10 @@
 @prefix : <http://www.oxfordsemantic.tech/f1demo/> .
 
+:hasRacedIn a owl:ObjectProperty .
 :results_driver a owl:ObjectProperty .
+:results_race a owl:ObjectProperty .
 
-:results rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty :results_driver ;
-    owl:maxCardinality 1
-] .
+:hasRacedIn owl:propertyChainAxiom (
+    [owl:inverseOf :results_driver]
+    :results_race
+) .

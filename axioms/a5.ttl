@@ -1,14 +1,9 @@
 @prefix : <http://www.oxfordsemantic.tech/f1demo/> .
 
-:drivers a ___ .
-:results a ___ .
-:constructors a ___ .
+:results_constructor a ___ .
 
-[
-    a owl:AllDisjointClasses ;
-    owl:members (
-        ___
-        ___
-        ___
-    )
+___ rdfs:subClassOf [
+    a ___ ;
+    ___ :results_constructor ;
+    owl:minCardinality ___
 ] .

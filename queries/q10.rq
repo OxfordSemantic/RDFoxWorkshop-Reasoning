@@ -1,5 +1,0 @@
-PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
-
-SELECT (COUNT(?s) AS ?count) WHERE {
-    ?s a :wins
-}

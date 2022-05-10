@@ -8,8 +8,9 @@ endpoint start
 dstore create f1
 active f1
 
-import data/upTo2020.ttl.zip
+import data/upTo2020.ttl
 import data/sample.ttl
+
 
 # AXIOM SET 1
 
@@ -20,6 +21,7 @@ importaxioms :axioms
 
 answer queries/q1.rq
 
+
 # AXIOM SET 2
 
 answer queries/q2.rq
@@ -29,14 +31,24 @@ importaxioms :axioms
 
 answer queries/q2.rq
 
+
+#FIXING MISTAKES
+
+importaxioms :axioms -
+update ! clear graph :axioms
+import > :axioms axioms/a1.ttl axioms/a2.ttl
+importaxioms :axioms
+
+
 # AXIOM SET 3
 
 answer queries/q3.rq
 
-import > :axioms axioms/a3.ttl
+import > :axioms axioms/a3-completed.ttl
 importaxioms :axioms
 
 answer queries/q3.rq
+
 
 # AXIOM SET 4
 
@@ -47,10 +59,12 @@ importaxioms :axioms
 
 answer queries/q4.rq
 
+
 # AXIOM SET 5
 
-import > :axioms axioms/a5.ttl
+import > :axioms axioms/a5-completed.ttl
 importaxioms :axioms
+
 
 # AXIOM SET 6
 
@@ -61,37 +75,15 @@ importaxioms :axioms
 
 answer queries/q6.rq
 
+
 # AXIOM SET 7
+
+answer queries/q7.rq
 
 import > :axioms axioms/a7.ttl
 importaxioms :axioms
 
-# AXIOM SET 8
-
-answer queries/q8.rq
-
-import > :axioms axioms/a8.ttl
-importaxioms :axioms
-
-answer queries/q8.rq
-
-# AXIOM SET 9
-
-answer queries/q9.rq
-
-import > :axioms axioms/a9.ttl
-importaxioms :axioms
-
-answer queries/q9.rq
-
-# AXIOM SET 10
-
-answer queries/q10.rq
-
-import > :axioms axioms/a10.ttl
-importaxioms :axioms
-
-answer queries/q10.rq
+answer queries/q7.rq
 
 # CLEAR AXIOMS, REMOVE "SAMPLE" DATA
 
@@ -99,6 +91,7 @@ importaxioms :axioms -
 info axioms
 
 import - data/sample.ttl
+
 
 # RULE 1
 
@@ -108,6 +101,7 @@ import rules/r1.dlog
 
 answer queries/q11.rq
 
+
 # RULE 2
 
 answer queries/q12.rq
@@ -115,6 +109,7 @@ answer queries/q12.rq
 import rules/r2.dlog
 
 answer queries/q12.rq
+
 
 # RULE 3
 
@@ -124,6 +119,7 @@ import rules/r3.dlog
 
 answer queries/q13.rq
 
+
 # RULE 4
 
 answer queries/q14.rq
@@ -131,6 +127,7 @@ answer queries/q14.rq
 import rules/r4.dlog
 
 answer queries/q14.rq
+
 
 # RULE 5
 
@@ -140,6 +137,7 @@ import rules/r5.dlog
 
 answer queries/q15.rq
 
+
 # ADD MORE DATA
 
 answer queries/q15b.rq
@@ -147,6 +145,7 @@ answer queries/q15b.rq
 import data/2021-22.ttl
 
 answer queries/q15b.rq
+
 
 # RULE 6
 

@@ -1,5 +1,5 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT ?class WHERE {
-    :results\/123456789 a ?class
+SELECT ?p ?o WHERE {
+    :drivers\/123456789 ?p ?o
 }

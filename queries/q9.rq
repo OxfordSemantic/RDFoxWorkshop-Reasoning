@@ -1,6 +1,6 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT ?p ?o
+SELECT (COUNT(?o) AS ?count)
 WHERE {
-    :drivers\/123456789 ?p ?o
+    ?s :hasPodiumInRace ?o
 }

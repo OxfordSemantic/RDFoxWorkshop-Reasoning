@@ -1,5 +1,0 @@
-PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
-
-SELECT (COUNT(?driver) AS ?count) WHERE {
-    ?driver a :DriverWithoutPodiums
-}

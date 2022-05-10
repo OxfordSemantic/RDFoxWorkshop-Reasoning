@@ -1,5 +1,11 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT (COUNT(?o) AS ?count) WHERE {
-    ?s :hasRacedIn ?o
+SELECT ?forename ?surname ?count ?winCount
+WHERE {
+    ?driver :drivers_forename ?forename ;
+        :drivers_surname ?surname ;
+        :hasRaceCount ?count ;
+        :hasRaceWinCount ?winCount .
 }
+ORDER BY DESC(?winCount)
+LIMIT 10

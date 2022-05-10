@@ -88,69 +88,68 @@ answer queries/q7.rq
 # CLEAR AXIOMS, REMOVE "SAMPLE" DATA
 
 importaxioms :axioms -
-info axioms
 
 import - data/sample.ttl
 
 
 # RULE 1
 
-answer queries/q11.rq
+answer queries/q8.rq
 
 import rules/r1.dlog
 
-answer queries/q11.rq
+answer queries/q8.rq
 
 
 # RULE 2
 
-answer queries/q12.rq
+answer queries/q9.rq
 
 import rules/r2.dlog
 
-answer queries/q12.rq
+answer queries/q9.rq
 
 
 # RULE 3
 
-answer queries/q13.rq
+answer queries/q10.rq
 
 import rules/r3.dlog
 
-answer queries/q13.rq
+answer queries/q10.rq
 
 
 # RULE 4
 
-answer queries/q14.rq
+answer queries/q11.rq
 
-import rules/r4.dlog
+import rules/r4-completed.dlog
 
-answer queries/q14.rq
+answer queries/q11.rq
 
 
 # RULE 5
 
-answer queries/q15.rq
+answer queries/q12.rq
 
 import rules/r5.dlog
 
-answer queries/q15.rq
+answer queries/q12.rq
 
 
 # ADD MORE DATA
 
-answer queries/q15b.rq
+answer queries/q12b.rq
 
 import data/2021-22.ttl
 
-answer queries/q15b.rq
+answer queries/q12b.rq
 
 
 # RULE 6
 
-answer queries/q16.rq
+answer queries/q13.rq
 
-import rules/r6.dlog
+import rules/r6-completed.dlog
 
-answer queries/q16.rq
+answer queries/q13.rq

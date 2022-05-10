@@ -1,6 +1,7 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT ?driver ?p ?o WHERE {
+SELECT ?driver ?p ?o
+WHERE {
     ?driver :drivers_forename "George";
         :drivers_surname "Russell";
         ?p ?o

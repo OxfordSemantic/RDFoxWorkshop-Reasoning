@@ -1,5 +1,6 @@
 PREFIX : <http://www.oxfordsemantic.tech/f1demo/>
 
-SELECT (COUNT(?o) AS ?count) WHERE {
-    ?s :hasPodiumInRace ?o
+SELECT (COUNT(?driver) AS ?count)
+WHERE {
+    ?driver a :DriverWithoutPodiums
 }

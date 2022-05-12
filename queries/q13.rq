@@ -7,4 +7,6 @@ WHERE {
         :hasWinPercentage ?percentage;
         :hasRaceCount ?count .
     FILTER(?count > 10)
-} ORDER BY DESC(?percentage) LIMIT 10
+}
+ORDER BY DESC(?percentage)
+LIMIT 10

@@ -1,3 +1,5 @@
+@prefix : <http://www.oxfordsemantic.tech/f1demo/> .
+
 :drivers\/123456789 # does not belong to any class
     :drivers_forename "John";
     :drivers_surname "Smith" .
